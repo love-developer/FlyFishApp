@@ -1,0 +1,58 @@
+.container {
+  color: #000;
+  background-color: white;
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+.subscribe{
+  font-weight: 700;
+  color: #000;
+  font-size: 2rem !important;
+}
+
+.description{
+  font-weight: normal;
+  text-align: start;
+  margin-top: 5px !important;
+  justify-content: start !important;
+  color: #000;
+  font-size: 0.9rem !important;
+}
+
+.getLatest{
+  font-weight: 400 !important;
+  color: #000;
+  font-size: 1.3rem !important;
+  margin-bottom: 30px !important;
+}
+
+.container h2 {
+  font-size: 2.5rem;
+}
+
+.container h4 {
+  font-size: 1.5rem;
+}
+
+.container .form-control {
+  border-radius: 0.5rem;
+}
+
+.container .btn-dark {
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container h2 {
+    font-size: 2rem;
+  }
+  .container h4 {
+    font-size: 1.2rem;
+  }
+  .container .form-control,
+  .container .btn-dark {
+    width: 100%;
+  }
+}

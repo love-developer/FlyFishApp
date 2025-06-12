@@ -1,0 +1,35 @@
+.faq-item {
+  background: white;
+  border-radius: 16px;
+  padding: 10px 20px 10px 20px;
+  margin: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.faq-answer {
+  margin-top: 15px !important;
+  font-size: 16px !important;
+  color: black;
+}
+
+.icon {
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.faq-item.open .icon {
+  transform: rotate(180deg);
+}

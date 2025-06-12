@@ -1,0 +1,87 @@
+.appDownload {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ff9a56;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .appText {
+    flex: 1;
+    color: #fff;
+  }
+  
+  .appText h2 {
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .appText p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .appButtons {
+    margin-top: 15px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .appButtons img {
+    height: 50px;
+  }
+  
+  .appImage {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  
+  .appImageOne {
+    width: 100px;
+    height: 200px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .appImageTwo {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    transform: translateY(-60px);
+    z-index: 0;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .appDownload {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .appImage {
+      justify-content: center;
+      margin-top: 30px;
+    }
+  
+    .appImageOne,
+    .appImageTwo {
+      position: relative;
+      transform: none;
+      width: 100px;
+      height: auto;
+    }
+  
+    .appImageTwo {
+      margin-left: -40px;
+    }
+  }

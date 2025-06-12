@@ -1,0 +1,84 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 35px;
+  
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .logo span {
+    color: #ff6200;
+  }
+  
+  .navLinks {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    font-weight: 500;
+    color: #2D2D2D;
+    font-size: 18px;
+  }
+  
+  .navLinks li {
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .navButtons {
+    display: flex;
+    gap: 10px;
+  }
+
+
+
+
+
+.loginBtn,
+.signupBtn {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #2D2D2D;
+  font-size: 18px;
+}
+
+.loginBtn {
+  background-color: transparent;
+}
+
+.signupBtn {
+  background-color: #ff8800;
+  color: #fff;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #2D2D2D;
+  transition: color 0.2s ease;
+}
+
+.navLink:hover {
+  color: #ff8800;
+}
+
+.active {
+  color: green;
+  font-weight: 600;
+}
+

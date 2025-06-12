@@ -1,0 +1,295 @@
+/* styles/Home.module.css */
+
+.container {
+
+  background-color: #f2f2f2;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('/news.jpeg');
+  width: 100vw;
+  height: 100vh;
+  background-position: center; /* Adjusted */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.heroContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 4rem;
+}
+
+.heroText {
+  flex: 1;
+  max-width: 600px;
+}
+
+.heroTitle {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #2c3e50;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 500px;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.bookActivitiesBtn {
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 1.2rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bookActivitiesBtn:hover {
+  background: #e67e22;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+}
+
+.bookPackagesBtn {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f39c12;
+  border: 2px solid rgba(241, 196, 15, 0.3);
+  padding: 1.2rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bookPackagesBtn:hover {
+  background: rgba(241, 196, 15, 0.25);
+  border-color: rgba(241, 196, 15, 0.5);
+  transform: translateY(-2px);
+}
+
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  max-width: 600px;
+}
+
+.flyboardImage {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+  border-radius: 20px;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  margin: 2rem 4rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.feature {
+  text-align: center;
+  max-width: 280px;
+  padding: 1rem;
+}
+
+.featureIcon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.5rem;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featureIcon:hover {
+  transform: translateY(-5px);
+}
+
+.checkmark {
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+.people {
+  font-size: 2rem;
+}
+
+.award {
+  color: #f39c12;
+  font-size: 2rem;
+}
+
+.featureTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.featureDescription {
+  color: #7f8c8d;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .heroContent {
+    gap: 2rem;
+  }
+  
+  .heroTitle {
+    font-size: 3.2rem;
+  }
+  
+  .features {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 1rem;
+    min-height: auto;
+  }
+  
+  .heroContent {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+  
+  .heroText {
+    max-width: none;
+  }
+  
+  .heroTitle {
+    font-size: 2.8rem;
+  }
+  
+  .heroDescription {
+    font-size: 1.1rem;
+  }
+  
+  .heroDescription br {
+    display: none;
+  }
+  
+  .heroButtons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .bookActivitiesBtn, 
+  .bookPackagesBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+  }
+  
+  .heroImage {
+    max-width: 400px;
+  }
+  
+  .flyboardImage {
+    max-width: 350px;
+  }
+  
+  .features {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 1rem;
+    padding: 2rem 1rem;
+  }
+  
+  .feature {
+    max-width: none;
+  }
+  
+  .featureDescription br {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+  
+  .heroDescription {
+    font-size: 1rem;
+  }
+  
+  .flyboardImage {
+    max-width: 280px;
+  }
+  
+  .features {
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  
+  .featureIcon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8rem;
+  }
+  
+  .checkmark {
+    font-size: 2rem;
+  }
+  
+  .people, .award {
+    font-size: 1.6rem;
+  }
+}

@@ -1,0 +1,131 @@
+.flyfishContainer {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.flyfishLogo {
+  height: 60px;
+  width: 200px;
+  margin-bottom: 70px;
+}
+
+.flyfishdescription {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.socialIcons {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.socialIcon {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.socialIcon:hover {
+  transform: translateY(-4px);
+}
+
+.socialIcon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+
+.call {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 15px 0;
+}
+
+.book {
+  background-color: #f5a623;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.book:hover {
+  background-color: #e5941e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .flyfishContainer {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .flyfishLogo {
+    font-size: 1.5rem;
+  }
+
+  .flyfishdescription {
+    font-size: 0.9rem;
+  }
+
+  .socialIcon {
+    font-size: 1.2rem;
+  }
+
+  .call {
+    font-size: 1rem;
+  }
+
+  .book {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flyfishLogo {
+    font-size: 1.2rem;
+  }
+
+  .flyfishdescription {
+    font-size: 0.8rem;
+  }
+
+  .socialIcons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .socialIcon {
+    margin: 5px;
+  }
+
+  .call {
+    font-size: 0.9rem;
+  }
+
+  .book {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}

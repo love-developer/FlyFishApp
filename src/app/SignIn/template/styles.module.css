@@ -1,0 +1,152 @@
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding:  2% 8%;
+
+}
+
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 120px;
+}
+
+.loginSection {
+  flex: 1;
+  margin-top: 25px;
+  max-width: 500px;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.inputGroup {
+
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: transparent;
+  background-color: transparent;
+}
+
+.forgotPassword {
+  text-align: right;
+  display: block;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+}
+
+
+.socialLogin {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.signupLink{
+  margin-top: 8px !important;
+  text-align: center;
+  color: #ff8800;
+  font-size: 0.7rem;
+}
+
+.signupLink a {
+  color: #ff8800;
+  text-decoration: underline;
+}
+
+.imageSection {
+  flex: 1;
+  position: relative;
+}
+
+.mainImage {
+  border-radius: 20px;
+  width: 100%;
+  height: auto;
+}
+
+.imageCaption {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+}
+
+.welcome {
+  font-weight: 500;
+  color: black;
+  font-size: 1.4rem;
+  margin-top: 15px !important;
+  margin-bottom: 5px !important;
+}
+
+.inputTitle{
+  font-weight: 400;
+  color: black;
+  font-size: 0.9rem;
+  margin-bottom: 5px !important;
+}
+
+.description {
+  font-weight: 500;
+  color: black;
+  font-size: 0.95rem;
+  margin-bottom: 30px !important;
+}
+
+
+.fbButton {
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.fb-button:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.fb-icon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.orLogin {
+  color: #ff8800 ;
+  font-size: 0.8rem !important;
+  font-weight: 700;
+  margin-bottom: 6px !important;
+}

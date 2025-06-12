@@ -1,0 +1,35 @@
+
+.customCursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, width 0.1s ease, height 0.1s ease;
+    background: rgba(255, 255, 255, 0.7);
+  }
+  
+  .customCursor::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 8px;
+    border-color: transparent transparent transparent #000;
+    transform: translate(-50%, -50%);
+  }
+  
+  .customCursor.hover {
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.9);
+  }
+  
+
+  

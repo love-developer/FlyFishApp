@@ -1,0 +1,491 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem 1.5rem 3rem;
+
+}
+/* img, svg {
+  display: block;
+} */
+/* button {
+  cursor: pointer;
+  border: none;
+  background: none;
+} */
+/* Image */
+.heroImage {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3); /* Increased blur to 30px, darker rgba */
+  object-fit: cover;
+  height: auto;
+  max-height: 400px;
+}
+/* Title and price */
+.titlePrice {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.titlePrice h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0;
+  color: #222;
+}
+.titlePrice .price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #222;
+}
+/* Location */
+.location {
+  margin-top: 0.2rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  gap: 0.3rem;
+}
+.location svg {
+  width: 16px;
+  height: 16px;
+  stroke: #888;
+  stroke-width: 2;
+  fill: none;
+}
+/* Description */
+.description {
+  margin-top: 1rem;
+  line-height: 1.5;
+  color: #555;
+  max-width: 680px;
+  font-size: 1rem;
+}
+/* Offer / points / reviews / share */
+.offersContainer {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  max-width: 680px;
+}
+.offerButton {
+  background: #f0f0f0;
+  border-radius: 8px;
+  padding: 0.35rem 1rem;
+  font-size: 0.9rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid transparent;
+  transition: background-color 0.2s, color 0.2s;
+}
+.offerButton svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+  stroke: currentColor;
+  fill: none;
+}
+.offerButton.orange {
+  background: #fff4e5;
+  color: #d87d00;
+  border-color: #f4c466;
+  fill: #d87d00;
+}
+.offerButton:hover {
+  background-color: #ddd;
+}
+/* Booking section */
+.booking {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.bookingleft, .bookingright {
+  flex: 1 1 300px;
+  min-width: 280px;
+}
+/* Steps */
+.step {
+  margin-bottom: 1.5rem;
+}
+.stepheader {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+.stepheader .stepbadge {
+  background: #44bb44;
+  color: white;
+  font-weight: 700;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 0.85rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.stepheader .stepbadge.gray {
+  background: #999999;
+}
+.steptitle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222222;
+  flex-grow: 1;
+}
+.durationcontrol {
+  background: #eee;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.durationcontrol:focus-within {
+  border-color: #ff9400;
+}
+.durationcontrol button {
+  background: #ff9400;
+  color: white;
+  font-weight: 800;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.25rem;
+  user-select: none;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border: none;
+  transition: background-color 0.2s;
+}
+.durationcontrol button:lastchild {
+  border-radius: 0 6px 6px 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.durationcontrol button:hover {
+  background: #ffb347;
+}
+.durationcontrol span {
+  display: inline-block;
+  min-width: 48px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  padding: 0.3rem 0;
+  user-select: none;
+}
+/* Date input */
+/* input[type="date"] {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  outline-offset: 0;
+  border-color: transparent;
+  transition: border-color 0.2s;
+  min-width: 130px;
+  max-width: 160px;
+}
+input[type="date"]:focus {
+  border-color: #ff9400;
+  outline: none;
+} */
+/* Select input */
+.selectInput {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  min-width: 140px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.selectInput:focus {
+  border-color: #ff9400;
+  outline: none;
+}
+/* Equipment controls */
+.equipcontrol {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #eee;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+  padding: 0 0.6rem;
+  width: 105px;
+  height: 36px;
+}
+.equipcontrol:focus-within {
+  border-color: #ff9400;
+}
+.equipcontrol button {
+  background: #ff9400;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+.equipcontrol button:hover {
+  background: #ffb347;
+}
+.equipcontrol span {
+  font-weight: 600;
+  min-width: 20px;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #333;
+  user-select: none;
+}
+/* Add to cart button */
+.addcartbtn {
+  background: #ff9400;
+  width: 100%;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  padding: 1rem 0;
+  cursor: pointer;
+  border: none;
+  margin-top: 0.5rem;
+  letter-spacing: 0.04em;
+  transition: background-color 0.25s;
+}
+.addcartbtn:hover {
+  background: #e37a00;
+}
+/* Calendar */
+.calendarwrapper {
+  background: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  max-width: 350px;
+}
+.calendarheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #222;
+}
+.calendarmonthyear {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #777;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.calendarnavbtn {
+  background: transparent;
+  color: #aaa;
+  cursor: not-allowed;
+  font-weight: 600;
+  font-size: 1.2rem;
+  user-select: none;
+  border: none;
+  padding: 0 0.4rem;
+}
+.calendardaysrow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+.calendardaysrow div {
+  padding: 0.2rem 0;
+}
+.calendardates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  text-align: center;
+}
+.calendardate {
+  cursor: pointer;
+  padding: 0.55rem 0;
+  border-radius: 50%;
+  font-weight: 600;
+  color: #444;
+  background: transparent;
+  border: none;
+  transition: all 0.25s;
+}
+.calendardate:hover {
+  background: #ffe3b8;
+  color: #c87400;
+}
+.calendardate.selected {
+  background: #ff9400;
+  color: white;
+  box-shadow: 0 2px 6px rgb(255 148 0 / 0.5);
+  cursor: default;
+}
+.calendarsavebtn {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: right;
+  color: #ff9400;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+/* Tips box */
+.tipsbox {
+  background: #fff4e5;
+  border-radius: 8px;
+  border: 1px solid #f4c466;
+  padding: 1rem;
+  color: #d87d00;
+  font-size: 0.9rem;
+  max-width: 350px;
+}
+.tipsheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.tipsheader svg {
+  margin-right: 0.3rem;
+}
+.tipslist {
+  list-style-type: disc;
+  padding-left: 1.3rem;
+  margin: 0;
+  color: #aa7a00;
+}
+.tipslist li {
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+.tipsloadmore {
+  color: #d87d00;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.9rem;
+  user-select: none;
+  margin-left: 1rem;
+}
+/* Reviews */
+.reviewssection {
+  margin-top: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.reviewsheader {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #222;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.review {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: #fafafa;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.04);
+}
+.reviewheader {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
+}
+.reviewavatar {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.reviewinfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.reviewname {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #222;
+}
+.reviewdate {
+  font-size: 0.75rem;
+  color: #777;
+}
+.reviewtext {
+  font-size: 0.9rem;
+  color: #444;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+.reviewimages {
+  margin-top: 0.7rem;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+}
+.reviewimages img {
+  width: 90px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .booking {
+    flex-direction: column;
+  }
+  .offerscontainer {
+    justify-content: center;
+  }
+  .titleprice {
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+  }
+  .bookingleft,
+  .bookingright {
+    max-width: 100%;
+    min-width: auto;
+  }
+  .calendarwrapper,
+  .tipsbox {
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,257 @@
+.editProfileCard {
+  background: #fff;
+  border-radius: 22px;
+  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+  padding: 36px 36px 28px 36px;
+  max-width: 900px;
+  margin: 36px auto;
+  border: 1.5px solid #ececec;
+  position: relative;
+}
+
+.editProfileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.profileImage {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+
+.profileNameRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.profileName {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.profileEmail {
+  font-size: 1.08rem;
+  color: #888;
+  font-weight: 400;
+}
+
+.profileActionsRow {
+  display: flex;
+  gap: 18px;
+  margin-top: 2px;
+}
+
+.profileActionBtn {
+  background: #fff;
+  border: 1.5px solid #ececec;
+  border-radius: 12px;
+  padding: 10px 26px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #222;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: border 0.18s, box-shadow 0.18s, color 0.18s;
+}
+.profileActionBtn:hover {
+  border: 1.5px solid #ffb300;
+  color: #ffb300;
+}
+
+.languageDropdownWrapper {
+  align-self: flex-start;
+}
+.languageDropdown {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: 1.5px solid #ececec;
+  font-size: 1.08rem;
+  font-weight: 500;
+  background: #fff;
+  color: #222;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.editProfileForm {
+  margin-top: 18px;
+}
+.formRow {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.formLabel {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.formInput {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #ececec;
+  font-size: 1.08rem;
+  background: #fafbfc;
+  color: #222;
+  outline: none;
+  transition: border 0.18s;
+}
+.formInput:focus {
+  border: 1.5px solid #ffb300;
+}
+.formInputOrange {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1.5px solid #ffb300;
+  font-size: 1.08rem;
+  background: #fafbfc;
+  color: #ffb300;
+  outline: none;
+  transition: border 0.18s;
+}
+.passwordInputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.eyeIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bbb;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+.changePasswordBtn {
+  background: #fff;
+  border: 1.5px solid #ececec;
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #222;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  cursor: pointer;
+  transition: border 0.18s, color 0.18s;
+  margin-top: 22px;
+  white-space: nowrap;
+}
+.changePasswordBtn:hover {
+  border: 1.5px solid #ffb300;
+  color: #ffb300;
+}
+.formActionsRow {
+  display: flex;
+  gap: 18px;
+  margin-top: 18px;
+  justify-content: flex-start;
+}
+.saveBtn {
+  background: #ffb300;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 13px 38px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(255,179,0,0.08);
+  transition: background 0.18s;
+}
+.saveBtn:hover {
+  background: #ff9800;
+}
+.discardBtn {
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #ececec;
+  border-radius: 10px;
+  padding: 13px 38px;
+  font-size: 1.12rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border 0.18s, color 0.18s;
+}
+.discardBtn:hover {
+  border: 1.5px solid #ffb300;
+  color: #ffb300;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+  .editProfileCard {
+    padding: 22px 8vw 18px 8vw;
+    max-width: 98vw;
+  }
+  .editProfileHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+  .profileInfo {
+    gap: 16px;
+  }
+  .profileImage {
+    width: 80px;
+    height: 80px;
+  }
+  .profileName {
+    font-size: 1.3rem;
+  }
+  .profileEmail {
+    font-size: 0.98rem;
+  }
+  .profileActionsRow {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .languageDropdownWrapper {
+    align-self: stretch;
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .languageDropdown {
+    min-width: 90px;
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+  .formRow {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .formActionsRow {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .saveBtn, .discardBtn {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

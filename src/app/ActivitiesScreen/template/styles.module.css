@@ -1,0 +1,131 @@
+.individualActivities {
+  padding: 60px 20%;
+  position: relative;
+  width: 100%;
+  background-image: url('../../../../public/bg.png'); /* path to your image */
+  background-size: contain;       /* scale image to cover the container */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* prevent tiling */
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionHeader h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sectionHeader p {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.activitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.activityCard {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  padding: 8px 8px 20px 8px;
+}
+
+.activityCard:hover {
+  transform: translateY(-5px);
+}
+
+.activityImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.titles{
+  display: flex;
+  flex-direction: row; /* Default, can be omitted */
+  justify-content: space-between;
+}
+
+.activityInfo {
+  padding: 15px;
+  text-align: center;
+}
+
+.activityInfo h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.people {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 14px;
+  color: #666;
+}
+
+.loading, .error {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  padding: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .individualActivities {
+    padding: 40px 0;
+  }
+
+  .sectionHeader h2 {
+    font-size: 24px;
+  }
+
+  .sectionHeader p {
+    font-size: 14px;
+  }
+
+  .activitiesGrid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .activityImage {
+    height: 150px;
+  }
+
+  .activityInfo h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .activitiesGrid {
+    grid-template-columns: 1fr;
+  }
+}
