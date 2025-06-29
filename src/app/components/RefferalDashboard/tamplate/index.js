@@ -5,28 +5,28 @@ import { Line } from 'react-chartjs-2';
 import './styles.css';
 
 import {
-    Chart as ChartJS,
-    LinearScale,
-    CategoryScale,
-    LineElement,
-    PointElement,
-    Filler,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
-  
-  // Add this registration step right after the imports
-  ChartJS.register(
-    LinearScale,
-    CategoryScale,
-    LineElement,
-    PointElement,
-    Filler,
-    Title,
-    Tooltip,
-    Legend
-  );
+  Chart as ChartJS,
+  LinearScale,
+  CategoryScale,
+  LineElement,
+  PointElement,
+  Filler,
+  Title,
+  Tooltip,
+  Legend,
+} from 'chart.js';
+
+// Add this registration step right after the imports
+ChartJS.register(
+  LinearScale,
+  CategoryScale,
+  LineElement,
+  PointElement,
+  Filler,
+  Title,
+  Tooltip,
+  Legend
+);
 
 // Sample data for the graph (Jan to Sep)
 const graphData = {
@@ -59,6 +59,11 @@ const ReferralDashboard = () => {
 
   const chartOptions = {
     responsive: true,
+    plugins: {
+      legend: {
+        display: false
+      }
+    },
     scales: {
       y: {
         beginAtZero: true,
@@ -71,15 +76,12 @@ const ReferralDashboard = () => {
   return (
     <div className="dashboard-container">
       {/* Header Section */}
-      <div className="header-section">
-        <h1 className="referral-code">Your Referral Code: Y4053</h1>
-        <Settings className="settings-icon" />
-      </div>
+
 
       <div className="main-content">
         {/* Left Section: Balance and Button */}
         <div className="balance-section">
-          <h2 className="balance-title">Ref Balance</h2>
+          <p className="balance-title">Referral Balance</p>
           <div className="balance-display">
             <div className="circle-container">
               <svg className="progress-circle" viewBox="0 0 100 100">
@@ -117,7 +119,13 @@ const ReferralDashboard = () => {
 
         {/* Right Section: Graph */}
         <div className="graph-section">
+          <div className="header-section">
+            <p>Your Referral Code: Y4053</p>
+          </div>
+          <div className="graphs">
           <Line data={chartData} options={chartOptions} />
+          </div>
+          
         </div>
       </div>
 

@@ -1,21 +1,45 @@
 /* styles/Home.module.css */
 
 .container {
-
-  background-color: #f2f2f2;
+  background-color: #f6f6f6;
 }
 
 /* Hero Section */
 .hero {
+  position: relative;
   background-image: url('/news.jpeg');
   width: 100vw;
-  height: 100vh;
-  background-position: center; /* Adjusted */
+  height: 200vh;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
+  display: block;
+  justify-content: space-between;
+  padding: 40px 100px;
+
 }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  background: linear-gradient(to top, #f5f5f5, rgba(245, 245, 245, 0));
+  pointer-events: none;
+}
 
+.heroMain {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+  height: 80vh;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
 
 .heroContent {
   display: flex;
@@ -23,7 +47,8 @@
   justify-content: space-between;
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto;
+ 
+  margin-top: 60px;
   gap: 4rem;
 }
 
@@ -33,34 +58,46 @@
 }
 
 .heroTitle {
-  font-size: 4rem;
-  font-weight: 900;
-  color: #2c3e50;
+  font-family: var(--font-anton), sans-serif;
+  font-weight: 400;
+  font-size: 5rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  font-variant: small-caps;
+  color: #2d2d2d;
   line-height: 1.1;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
+  
   text-transform: uppercase;
+}
+.myDiv{
+  margin-top: -100px;
+  z-index: 1;
 }
 
 .heroDescription {
+  margin-top: 2rem !important;
+  font-family: var(--font-lora), serif;
+  font-weight: 400;
   font-size: 1.2rem;
-  color: #7f8c8d;
-  line-height: 1.6;
-  margin-bottom: 2.5rem;
-  max-width: 500px;
+  letter-spacing: 0%; 
+  vertical-align: middle;
+  color: #2d2d2d;
+  margin-bottom: 3rem !important;
+  /* max-width: 500px; */
 }
 
 .heroButtons {
   display: flex;
   gap: 1.5rem;
+  margin-top: 25px;
   align-items: center;
 }
 
 .bookActivitiesBtn {
-  background: #f39c12;
+  background: #ff8800;
   color: white;
   border: none;
-  padding: 1.2rem 2.5rem;
+  padding: 0.8rem 2.5rem;
   border-radius: 8px;
   font-weight: 600;
   font-size: 1.1rem;
@@ -72,31 +109,18 @@
 }
 
 .bookActivitiesBtn:hover {
-  background: #e67e22;
+  background: rgba(248, 189, 0, 0.8);
+  color: #000;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
 }
 
-.bookPackagesBtn {
-  background: rgba(241, 196, 15, 0.15);
-  color: #f39c12;
-  border: 2px solid rgba(241, 196, 15, 0.3);
-  padding: 1.2rem 2.5rem;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.bookActivitiesBtn img{
+  height: 24px;
+  width: 20px;
 }
 
-.bookPackagesBtn:hover {
-  background: rgba(241, 196, 15, 0.25);
-  border-color: rgba(241, 196, 15, 0.5);
-  transform: translateY(-2px);
-}
+
 
 .heroImage {
   flex: 1;
@@ -120,65 +144,107 @@
 .features {
   display: flex;
   justify-content: center;
-  gap: 4rem;
-  padding: 4rem 2rem;
-  background: rgba(255, 255, 255, 0.8);
-  margin: 2rem 4rem;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  gap: 3.5rem;
+  padding: 0 2rem;
+  margin: 0 auto;
+  border-radius: 32px;
+  position: relative;
+  z-index: 2;
+  min-height: 260px;
 }
 
 .feature {
   text-align: center;
-  max-width: 280px;
-  padding: 1rem;
+  max-width: 320px;
+  margin-top: 350px;
+  height: 220px;
+  width: 400px;
+  background: #fff;
+  border-radius: 32px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  position: relative;
+  transition: box-shadow 0.2s, border 0.2s;
+  border: none;
 }
 
-.featureIcon {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 1.5rem;
+.featureHighlight {
+  border: 2.5px solid #ffb200;
+  box-shadow: 0 0 32px 0 #ffe7b2, 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.featureIconwrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75px;
+  height: 75px;
   background: white;
   border-radius: 50%;
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.2rem;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
 }
 
-.featureIcon:hover {
-  transform: translateY(-5px);
+.featureIconwrapper img {
+  height: 50px !important;
+  width: 40px !important;
+  display: block;
+  margin: 0 auto;
+  color: #000;
 }
 
-.checkmark {
-  color: #27ae60;
-  font-weight: bold;
-  font-size: 2.5rem;
+.featureIconHighlight {
+  border: 3px solid #ffb200;
+  box-shadow: 0 0 24px 0 #ffe7b2, 0 4px 16px rgba(0,0,0,0.08);
 }
 
-.people {
-  font-size: 2rem;
-}
-
-.award {
-  color: #f39c12;
-  font-size: 2rem;
-}
 
 .featureTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  color: #2c3e50;
+  font-family: var(--font-inria-serif), 'Inria Serif', serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.375rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #2d2d2d;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 .featureDescription {
-  color: #7f8c8d;
-  line-height: 1.6;
+  font-family: var(--font-inter), Inter, sans-serif;
+  font-weight: 300;
   font-size: 1rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #2d2d2d;
+}
+
+.feature:hover {
+  box-shadow: 0px 1px 50px 0px red;
+}
+
+.feature:hover .featureIconwrapper {
+  box-shadow: 0px 1px 50px 0px red;
+}
+
+
+
+.sliderImage{
+  margin-top: 80px !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  max-width: 800px;
+  width: 100%;
+  height: auto;
+  /* Center the slider image horizontally */
 }
 
 /* Mobile Responsive */
@@ -291,5 +357,232 @@
   
   .people, .award {
     font-size: 1.6rem;
+  }
+}
+
+
+.faq{
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-bottom: 100px;
+}
+
+.faq h2 {
+  text-align: center;
+  font-family: 'Inria Serif', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  margin-bottom: 40px;
+}
+.activities {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100%;
+}
+
+.sliderTitle {
+  font-family: 'Inria Serif', serif;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 57px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+}
+
+.sliderDescription {
+  margin-top: 10px !important;
+  font-family: 'Hind', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 32px;
+}
+
+.pkg {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.125rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pkgSmall {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 1.525rem;
+  line-height: 22px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  margin-bottom: 0.5rem;
+}
+
+.offerDescription {
+  font-family: 'Inter', sans-serif;
+  margin-top: 20px !important;
+  font-weight: normal;
+  font-size: 1.1rem;
+  line-height: 1.25rem;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  margin-bottom: 2rem !important;
+}
+
+.packages{
+  background: #ff8800;
+  color: white;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  max-width: 230px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: auto;
+}
+
+.packages img{
+  height: 20px;
+  width: 16px;
+}
+
+.blogsSection {
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto 200px auto;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blogsTitle {
+  font-family: 'Inria Serif', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.blogsSubtitle {
+  font-family: 'Hind', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  margin-bottom: 70px !important;
+}
+
+.blogsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.2rem 2rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.blogCard {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, border 0.2s;
+  border: 2px solid transparent;
+  min-width: 0;
+}
+
+.blogCard:hover {
+  border: 2.5px solid #ffe7b2;
+  box-shadow: 0 0 32px 0 #ffe7b2, 0 4px 24px rgba(0,0,0,0.10);
+}
+
+.blogCard:hover .readBlog {
+  color: #ff8800;
+}
+
+.blogImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+}
+
+.blogContent {
+  padding: 1.2rem 1.2rem 0.8rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blogCardTitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.blogCardDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 1.2rem;
+}
+
+.blogCardFooter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+}
+
+.readBlog {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+@media (max-width: 1024px) {
+  .blogsGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .blogsGrid {
+    grid-template-columns: 1fr;
+  }
+  .blogsSection {
+    padding: 0 4px;
   }
 }

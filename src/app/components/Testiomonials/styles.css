@@ -1,12 +1,24 @@
-
-.testimonial-section h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
+.container{
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.testimonial-section h3 {
+  font-family: 'Inria Serif', serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.5rem;
   }
   
   .testimonial-section p {
-    font-size: 1.2rem;
-    color: #6c757d;
+    font-family: 'Inria Serif', var(--font-inria-serif), serif;
+    font-weight: 200;
+    font-size: 1.3rem;
+    line-height: 29.53px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: black;
   }
   
   .testimonial-slider {

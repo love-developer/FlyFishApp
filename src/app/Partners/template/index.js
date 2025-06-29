@@ -5,6 +5,7 @@ import PartnerService from '../../services/partner.service';
 import styles from './styles.module.css';
 import Image from 'next/image';
 import bannerImage from '../../../../public/partners.png'; // Adjust path if needed
+import LoadingIndicator from '../../components/LoadingIndicator';
 
 const Partners = () => {
   const [partners, setPartners] = useState([]);
@@ -28,7 +29,7 @@ const Partners = () => {
     fetchPartners();
   }, []);
 
-  if (loading) return <div className={styles.loading}>Loading...</div>;
+  if (loading) return <LoadingIndicator text="Loading partners..." />;
   if (error) return <div className={styles.error}>Error: {error}</div>;
 
 

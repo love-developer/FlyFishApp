@@ -8,6 +8,10 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
 }
 
+.faq-item:hover{
+  border: 1px solid #ff8800;
+}
+
 .faq-question {
   display: flex;
   justify-content: space-between;

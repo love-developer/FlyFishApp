@@ -3,6 +3,8 @@ import styles from "./blogs.module.css";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { blogService } from '../../services/blog.service';
+import Navbar from "../../components/NavBar";
+import LoadingIndicator from '../../components/LoadingIndicator';
 
 
 export default function Blogs() {
@@ -26,14 +28,16 @@ export default function Blogs() {
         fetchData();
       }, []);
     
-      if (loading) return <div className={styles.loader}>Loading blogs...</div>;
+      if (loading) return <LoadingIndicator text="Loading blogs..." />;
 
 
   return (
     <main className={styles.main}>
       {/* Hero Section */}
       <section className={styles.hero}>
+
         <div className={styles.heroOverlay}>
+          <Navbar translucent/>
           <h1 className={styles.heroTitle}>BLOGS</h1>
         </div>
       </section>

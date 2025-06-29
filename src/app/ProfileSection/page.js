@@ -1,4 +1,4 @@
-import {ProfileSection} from "./template";
+import ProfileSection from './template';
 
 export default function Home() {
   return <ProfileSection />;

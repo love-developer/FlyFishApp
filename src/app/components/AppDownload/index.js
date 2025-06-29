@@ -1,29 +1,33 @@
 import React from 'react';
-import './styles.module.css';
+import styles from './styles.module.css';
 
 const AppDownload = () => {
   return (
-    <section className={`${styles.appDownload} container-fluid`}>
-    <div className="row w-100">
-      <div className="col-md-6 d-flex flex-column justify-content-center">
-        <div className={styles.appText}>
-          <h2>Book Watersports<br /> Anytime, Anywhere!</h2>
-          <p>Make your next beach day unforgettable. Select from a range of watersports, confirm your booking, and get ready for an adventure!</p>
-          <div className={styles.appButtons}>
-            <a href="#"><img src="/play.png" alt="Google Play" /></a>
-            <a href="#"><img src="/app.png" alt="App Store" /></a>
+    <section className={styles.appDownloadSection}>
+      <div className={styles.appDownloadContent}>
+        <div className={styles.appDownloadText}>
+          <p className={styles.appDownloadTitle}>Book Watersports<br />Anytime, Anywhere!</p>
+          <p className={styles.appDownloadDesc}>
+            Make your next beach day unforgettable. Select from a<br />
+            range of watersports, confirm your booking, and get ready<br />
+            for an adventure!
+          </p>
+          <div className={styles.appDownloadButtons}>
+            <a href="#" className={styles.storeBtn}>
+              <img src="/play.png" alt="Get it on Google Play" height="48" />
+            </a>
+            <a href="#" className={styles.storeBtn}>
+              <img src="/app.png" alt="Download on the App Store" height="48" />
+            </a>
           </div>
         </div>
-      </div>
-      <div className="col-md-6 d-flex justify-content-center position-relative">
-        <div className={styles.appImage}>
-          <img src="/mockup_1.png" alt="App Mockup" className={styles.appImageOne} />
-          <img src="/mockup_2.png" alt="App Mockup" className={styles.appImageTwo} />
+        <div className={styles.appDownloadMockups}>
+          <img src="/mockup_2.png" alt="App Mockup 2" className={styles.mockupImg2} />
+          <img src="/mockup_1.png" alt="App Mockup 1" className={styles.mockupImg1} />
+
         </div>
       </div>
-    </div>
-  </section>
-
+    </section>
   );
 };
 

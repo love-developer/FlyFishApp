@@ -1,0 +1,37 @@
+.bookingSection {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+.bookingForm {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+.dates {
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+@media (max-width: 900px) {
+  .bookingSection {
+    flex-direction: column;
+    gap: 18px;
+  }
+  .bookingForm, .dates {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.description {
+  text-align: left;
+}
+
+.tips p {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+} 

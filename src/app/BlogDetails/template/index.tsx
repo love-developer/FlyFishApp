@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { blogService } from '../../services/blog.service';
 import { useParams } from "next/navigation";
 import styles from "../blogs.module.css";
+import LoadingIndicator from '../../components/LoadingIndicator';
 
 export default function BlogDetailPage() {
   const { id } = useParams();
@@ -27,7 +28,7 @@ export default function BlogDetailPage() {
         fetchData();
       }, );
     
-      if (loading) return <div className={styles.loader}>Loading blogs...</div>;
+      if (loading) return <LoadingIndicator text="Loading blog..." />;
 
   return (
     <div className={styles.blogDetailContainer}>

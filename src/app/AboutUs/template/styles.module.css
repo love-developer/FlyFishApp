@@ -1,10 +1,11 @@
 .flyfishContainer {
-  background-color: #f9f9f9;
-  padding: 20px;
+  background-color: #f7f7f7;
+  padding: 40px 60px;
   border-radius: 10px;
   text-align: center;
   width: 100%;
   height: 100%;
+  border: 1px solid #b0afaf;
   margin: 0 auto;
 }
 
@@ -16,7 +17,9 @@
 
 .flyfishdescription {
   font-size: 0.9rem;
-  color: #666;
+  color: #2d2d2d;
+  font-family: Inter;
+  font-weight: 300;
   margin-bottom: 50px;
 }
 
@@ -32,10 +35,10 @@
 
 .socialIcon {
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,13 +63,13 @@
 }
 
 .book {
-  background-color: #f5a623;
+  background-color: #ff8800;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 1rem;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .book:hover {

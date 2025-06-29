@@ -3,6 +3,15 @@ export const metadata = {
   description: "ESK IT",
 };
 
+import Navbar from "../components/NavBar";
+
+
 export default function RootLayout({ children }) {
-  return <>{children}</>;
+  return(
+<div>
+  
+    <Navbar />
+    {children}
+    </ div>
+  ) 
 }

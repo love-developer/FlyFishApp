@@ -101,8 +101,8 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="container testimonial-section py-5">
-      <h1 className="text-center mb-3">Testimonials</h1>
+    <div className="container testimonial-section py-5"> 
+      <h3 className="text-center mb-3">Testimonials</h3>
       <p className="text-center mb-5">Read what our customers say about our company and services.</p>
 
       <div className="row testimonial-slider">

@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/BookingScreen/template/index.tsx", "src/app/FlyFishPackages/template/index.jsx", "src/app/ForgetPassword/page.js"  ],
+, "src/app/BookingScreen/template/index.tsx", "src/app/FlyFishPackages/template/index.tsx", "src/app/ForgetPassword/page.js"  ],
   "exclude": [
     "node_modules"
   ]

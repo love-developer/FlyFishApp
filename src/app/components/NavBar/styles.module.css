@@ -4,48 +4,41 @@
     align-items: center;
     padding: 10px 20px;
   
-    background-color: #ffffff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+   
+    border: 2px solid white;
+    box-shadow: 0 2px 5px rgba(58, 53, 53, 0.1);
     border-radius: 10px;
-    margin: 35px;
+    /* margin: 30px 100px 40px 100px; */
   
   }
   
   .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 24px;
-    font-weight: bold;
+    height: 2.2rem !important;
+    width: 12% !important;
   }
   
-  .logo span {
-    color: #ff6200;
-  }
-  
+
   .navLinks {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 1.5rem;
     margin: 0;
     font-weight: 500;
     color: #2D2D2D;
-    font-size: 18px;
   }
   
   .navLinks li {
     cursor: pointer;
-    font-size: 16px;
+    font-size: 1rem;
   }
   
   .navButtons {
     display: flex;
     gap: 10px;
   }
-
-
-
-
 
 .loginBtn,
 .signupBtn {
@@ -80,5 +73,105 @@
 .active {
   color: green;
   font-weight: 600;
+}
+
+.navUser {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Increased gap */
+}
+
+.navIcon {
+  cursor: pointer;
+  color: #333;
+  width: 16px; /* Set a fixed width */
+  height: 18px; /* Set a fixed height */
+  transition: color 0.2s;
+}
+
+.navIcon:hover {
+  color: #000;
+}
+
+.profileImage {
+  width: 3rem; /* Increased size */
+  height: 3rem; /* Increased size */
+  border-radius: 18px; /* More rounded corners */
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.profileImage:hover {
+  border-color: #ff9100;
+}
+
+.navbarTranslucent {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 10px;
+    position: relative;
+  }
+
+  .logo {
+    justify-content: space-between;
+    font-size: 20px;
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 20px 0 10px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-radius: 0 0 10px 10px;
+    z-index: 10;
+    display: none;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .navButtons {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 8px;
+  }
+
+  .navUser {
+    gap: 1rem;
+  }
+
+  .profileImage {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    z-index: 20;
+  }
+}
+
+.hamburger {
+  display: none;
 }
 

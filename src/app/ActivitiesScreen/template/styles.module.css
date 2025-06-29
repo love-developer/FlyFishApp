@@ -1,11 +1,38 @@
 .individualActivities {
-  padding: 60px 20%;
+  background-color: #f6f6f6;
   position: relative;
   width: 100%;
-  background-image: url('../../../../public/bg.png'); /* path to your image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   background-size: contain;       /* scale image to cover the container */
   background-position: center;  /* center the image */
   background-repeat: no-repeat; /* prevent tiling */
+}
+
+.hero {
+  background: url('/packages.png') center/cover no-repeat;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 100px;
+}
+
+.heroTitle {
+  color: #fff;
+  font-family: var(--font-anton);
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 29.53px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: uppercase;
+  margin-top: 100px;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.4);
 }
 
 .sectionHeader {
@@ -13,11 +40,17 @@
   margin-bottom: 40px;
 }
 
-.sectionHeader h2 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
+.sectionHeaderTitle {
+  margin-top: 15% !important;
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 1.5rem !important;
+  line-height: 30px;
+  color: #000 !important;
+  margin-bottom: 2% !important;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .sectionHeader p {
@@ -29,9 +62,12 @@
 
 .activitiesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 20px;
-  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 70%;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 7% !important;
 }
 
 .activityCard {
@@ -41,53 +77,75 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
-  padding: 8px 8px 20px 8px;
+  padding: 8px 8px 3px 8px;
+  display: flex;
+  flex-direction: column;
+
 }
 
 .activityCard:hover {
+  box-shadow: 0px 1px 40px 2px #F8BD0033;
+  border: 2px solid #F8BD0033;
   transform: translateY(-5px);
 }
 
 .activityImage {
+  margin-bottom: 10px;
   width: 100%;
   height: 200px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
 
-.titles{
+.activityTitle {
+  font-family: var(--font-inter);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.titles {
   display: flex;
-  flex-direction: row; /* Default, can be omitted */
+  flex-direction: row;
   justify-content: space-between;
-}
-
-.activityInfo {
-  padding: 15px;
-  text-align: center;
-}
-
-.activityInfo h3 {
-  font-size: 18px;
-  color: #333;
+  flex-wrap: nowrap;
+  width: 100% !important;
+  padding-left: 5px;
+  padding-right: 5px;
   margin-bottom: 10px;
 }
 
 .price {
-  font-size: 16px;
-  color: #333;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: middle;
 }
 
 .people {
-  font-size: 14px;
+  font-family: var(--font-inter);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
   color: #666;
   margin-bottom: 5px;
 }
 
 .rating {
-  font-size: 14px;
-  color: #666;
+  font-family: var(--font-inter);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  vertical-align: middle;
 }
 
 .loading, .error {
@@ -98,6 +156,19 @@
 }
 
 /* Mobile Responsiveness */
+@media (max-width: 1200px) {
+  .activitiesGrid {
+    width: 80%;
+  }
+}
+
+@media (max-width: 992px) {
+  .activitiesGrid {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .individualActivities {
     padding: 40px 0;
@@ -112,7 +183,9 @@
   }
 
   .activitiesGrid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    width: 95%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .activityImage {
@@ -126,6 +199,13 @@
 
 @media (max-width: 576px) {
   .activitiesGrid {
+    width: 100%;
     grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+  
+  .activityCard {
+    max-width: 100%;
   }
 }
+

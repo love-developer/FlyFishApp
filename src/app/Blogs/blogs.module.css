@@ -9,6 +9,7 @@
   cursor: pointer;
   transition: box-shadow 0.2s, border 0.2s;
   border: 2px solid transparent;
+  
 }
 .card:hover {
   box-shadow: 0 8px 32px 0 rgba(255,179,0,0.18);
