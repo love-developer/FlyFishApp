@@ -1,44 +1,57 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  
-    background: #fff;
-   
-    border: 2px solid white;
-    box-shadow: 0 2px 5px rgba(58, 53, 53, 0.1);
-    border-radius: 10px;
-    /* margin: 30px 100px 40px 100px; */
-  
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    height: 2.2rem !important;
-    width: 12% !important;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #fff;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(58, 53, 53, 0.1);
+  border-radius: 10px;
+  position: relative;
+  width: 100%;
+}
 
-  .navLinks {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-    margin: 0;
-    font-weight: 500;
-    color: #2D2D2D;
-  }
-  
-  .navLinks li {
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .navButtons {
-    display: flex;
-    gap: 10px;
-  }
+.logo {
+  display: flex;
+  align-items: center;
+  height: 2.2rem !important;
+  width: 12% !important;
+  object-fit: contain;
+}
+
+.logoDesktop {
+  display: block;
+  height: 2.2rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.logoMobile {
+  display: block;
+  height: 2rem;
+  width: auto;
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  margin: 0;
+  font-weight: 500;
+  color: #2d2d2d;
+}
+
+.navLinks li {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.navButtons {
+  display: flex;
+  gap: 10px;
+}
 
 .loginBtn,
 .signupBtn {
@@ -47,7 +60,7 @@
   border-radius: 10px;
   cursor: pointer;
   font-weight: 500;
-  color: #2D2D2D;
+  color: #2d2d2d;
   font-size: 18px;
 }
 
@@ -62,7 +75,7 @@
 
 .navLink {
   text-decoration: none;
-  color: #2D2D2D;
+  color: #2d2d2d;
   transition: color 0.2s ease;
 }
 
@@ -78,14 +91,14 @@
 .navUser {
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Increased gap */
+  gap: 1.5rem;
 }
 
 .navIcon {
   cursor: pointer;
   color: #333;
-  width: 16px; /* Set a fixed width */
-  height: 18px; /* Set a fixed height */
+  width: 16px;
+  height: 18px;
   transition: color 0.2s;
 }
 
@@ -94,9 +107,9 @@
 }
 
 .profileImage {
-  width: 3rem; /* Increased size */
-  height: 3rem; /* Increased size */
-  border-radius: 18px; /* More rounded corners */
+  width: 3rem;
+  height: 3rem;
+  border-radius: 18px;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid transparent;
@@ -111,19 +124,28 @@
   background: rgba(255, 255, 255, 0.9);
 }
 
+.mobileIcons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 0.7rem;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .logoDesktop {
+    display: none;
+  }
+  .logoMobile {
+    display: block;
+  }
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px;
     position: relative;
   }
-
-  .logo {
-    justify-content: space-between;
-    font-size: 20px;
-  }
-
   .navLinks {
     flex-direction: column;
     gap: 16px;
@@ -133,45 +155,37 @@
     top: 60px;
     left: 0;
     padding: 20px 0 10px 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     border-radius: 0 0 10px 10px;
     z-index: 10;
     display: none;
   }
-
   .navLinks.open {
     display: flex;
   }
-
-  .navButtons {
-    width: 100%;
-    justify-content: flex-end;
-    margin-top: 10px;
-    gap: 8px;
+  .navButtons, .navUser, .loginBtn, .signupBtn {
+    display: none !important;
   }
-
-  .navUser {
-    gap: 1rem;
-  }
-
-  .profileImage {
-    width: 40px;
-    height: 40px;
-  }
-
   .hamburger {
     display: block;
     cursor: pointer;
     width: 32px;
     height: 32px;
-    position: absolute;
-    top: 18px;
-    right: 18px;
+    position: static;
     z-index: 20;
+  }
+  .logo {
+    width: 40% !important; /* Adjust mobile logo size */
+    height: auto !important;
   }
 }
 
-.hamburger {
-  display: none;
+@media (min-width: 769px) {
+  .logoMobile {
+    display: none;
+  }
 }
 
+/* .hamburger {
+  display: none;
+} */
