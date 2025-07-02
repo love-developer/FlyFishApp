@@ -16,7 +16,7 @@
 }
 
 .subscribe {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   color: #222;
   font-size: clamp(2rem, 5vw, 2.7rem);
@@ -24,7 +24,7 @@
 }
 
 .getLatest {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 400;
   color: #444;
   font-size: clamp(1rem, 3vw, 1.5rem);
@@ -41,7 +41,7 @@
 }
 
 .input {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   border: 1px solid #2d2d2d;
   border-radius: 12px;
@@ -54,16 +54,17 @@
 }
 
 .subscribeBtn {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   border: 1px solid #2d2d2d;
   border-radius: 12px;
   background: #fff;
-  color: #2d2d2d;
+  color: #ffffff;
   padding: 0.9rem 2.5rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  background-color: #2d2d2d;
 }
 
 .subscribeBtn:hover {
@@ -80,6 +81,7 @@
   max-width: 1200px;
   margin: 0 auto 2rem;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 .footerCol {
@@ -90,7 +92,7 @@
 }
 
 .aboutDesc {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: clamp(0.9rem, 2.5vw, 1.05rem);
   color: #222;
   margin: 1rem 0;
@@ -102,35 +104,41 @@
   gap: 0.7rem;
   margin-top: 0.8rem;
 }
-
-.socialIcon img {
+.socialIconAnchor {
+  padding: 6px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #ff8800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.socialIcon {
   width: 28px;
   height: 28px;
-  filter: brightness(0) saturate(100%) invert(54%) sepia(97%) saturate(749%) hue-rotate(359deg) brightness(101%) contrast(101%);
-  transition: filter 0.2s;
-}
-
-.socialIcon img:hover {
-  filter: brightness(0) saturate(100%) invert(36%) sepia(99%) saturate(749%) hue-rotate(359deg) brightness(101%) contrast(101%);
+  color: white !important;
 }
 
 .footerTitle {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 1rem;
   color: #222;
 }
 
-.footerLinks, .footerContact {
+.footerLinks,
+.footerContact {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footerLinks li, .footerContact li {
+.footerLinks li,
+.footerContact li {
   margin-bottom: 0.7rem;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: clamp(0.9rem, 2.5vw, 1.05rem);
 }
 
@@ -153,14 +161,14 @@
   padding: 6px;
   border-radius: 50%;
   vertical-align: middle;
-  box-shadow: 0px 4px 10px 0px #0000001A;
+  box-shadow: 0px 4px 10px 0px #0000001a;
 }
 
 .copyright {
   width: 100%;
   border-top: 1.5px solid #e0e0e0;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: clamp(0.9rem, 2.5vw, 1.05rem);
   color: #222;
   padding: 1rem 0;
@@ -217,20 +225,20 @@
 
   .subscribeBtn {
     width: 100%;
-    max-width: 300px;
     margin-top: 0;
   }
 
   .footerColumns {
     flex-direction: column;
-    align-items: center;
+    align-items: start;
+    justify-content: start;
     gap: 2rem;
   }
 
   .footerCol {
     max-width: 100%;
     min-width: 0;
-    text-align: center;
+    text-align: left;
   }
 
   .aboutDesc {
@@ -243,6 +251,80 @@
 
   .container h4 {
     font-size: clamp(1rem, 3vw, 1.2rem);
+  }
+}
+
+/* Mobile View with Image Layout */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem 0.5rem;
+  }
+  .footerlogoCol {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .footerColumns {
+    gap: 0rem !important;
+  }
+  .aboutDesc {
+    text-align: center !important;
+  }
+
+  .footerColumns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.2rem;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .footerCol {
+    max-width: 100%;
+    min-width: 0;
+    text-align: left;
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerLinks,
+  .footerContact {
+    text-align: left;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+
+  .aboutDesc {
+    text-align: left;
+    order: 3;
+    margin-top: 0.7rem;
+  }
+
+  .socials {
+    justify-content: flex-start;
+    gap: 0.5rem;
+    order: 4;
+  }
+
+  .footerLinks li,
+  .footerContact li {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+
+  .footerCol:first-child {
+    order: 2;
+  }
+
+  .footerCol:first-child .aboutDesc {
+    order: 1;
+  }
+
+  .footerCol:first-child .socials {
+    order: 2;
   }
 }
 
@@ -266,6 +348,7 @@
 
   .subscribeBtn {
     padding: 0.8rem 1.5rem;
+    width: 100% !important;
   }
 
   .footerColumns {
@@ -292,7 +375,8 @@
   .getLatest {
     font-size: clamp(0.8rem, 3vw, 1rem);
   }
-  .input, .subscribeBtn {
+  .input,
+  .subscribeBtn {
     font-size: 0.95rem;
     padding: 0.7rem 0.8rem;
   }
@@ -304,58 +388,13 @@
   }
 }
 
-/* --- General Mobile Tweaks --- */
-@media (max-width: 600px) {
-  .container {
-    padding: 1.2rem 0.5rem;
-  }
-  .footerColumns {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 1.2rem;
-    width: 100%;
-    min-width: 0;
-  }
-  .footerCol {
-    max-width: 100%;
-    min-width: 0;
-    text-align: left;
-    margin-bottom: 1.2rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .footerLinks, .footerContact {
-    text-align: left;
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    order: 1;
-  }
-  .aboutDesc {
-    text-align: left;
-    order: 2;
-    margin-top: 0.7rem;
-  }
-  .socials {
-    justify-content: flex-start;
-    gap: 0.5rem;
-  }
-  .footerLinks li, .footerContact li {
-    font-size: clamp(0.85rem, 2vw, 1rem);
-  }
-  .copyright {
-    font-size: clamp(0.8rem, 2vw, 0.95rem);
-    padding: 0.7rem 0;
-  }
-}
-
 /* --- Desktop Large Screens --- */
 @media (min-width: 1200px) {
   .container {
     padding: 3.5rem 8vw 1.5rem;
   }
   .footerColumns {
-    gap: 4rem;
+    gap: 2rem;
     max-width: 1400px;
   }
   .footerCol {

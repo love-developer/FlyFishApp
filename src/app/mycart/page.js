@@ -42,7 +42,7 @@ const mockCartItems = [
 
 export default function MyCart() {
   const [items, setItems] = useState(mockCartItems);
-  const [selected, setSelected] = useState(items.map(i => i.id));
+  const [selected, setSelected] = useState(items.map((i) => i.id));
   const [rewardPoints, setRewardPoints] = useState(120);
   const [coupon, setCoupon] = useState("");
   const [couponDiscount, setCouponDiscount] = useState(0);
@@ -85,7 +85,7 @@ export default function MyCart() {
 
   return (
     <div className={styles.cartPageContainer}>
-      < Navbar />
+      <Navbar />
       <div className={styles.cartHeader}>
         <span>My Cart</span>
         <div>
@@ -101,6 +101,7 @@ export default function MyCart() {
           </button>
         </div>
       </div>
+      
       <div className={styles.cartMain}>
         <div className={styles.cartListSection}>
           {items.map((item) => (
@@ -111,18 +112,30 @@ export default function MyCart() {
                 onChange={() => handleSelect(item.id)}
                 className={styles.itemCheckbox}
               />
-              <img src={item.imageUrl} alt={item.title} className={styles.cartItemImage} />
+              <img
+                src={item.imageUrl}
+                alt={item.title}
+                className={styles.cartItemImage}
+              />
               <div className={styles.cartItemDetails}>
                 <div className={styles.cartItemHeader}>
                   <span className={styles.cartItemTitle}>{item.title}</span>
                   <span className={styles.cartItemTime}>09:33</span>
                 </div>
                 <div className={styles.cartItemLocation}>
-                  <img src="/location.png" alt="location" className={styles.icon} />
+                  <img
+                    src="/location.png"
+                    alt="location"
+                    className={styles.icon}
+                  />
                   {item.location}
                 </div>
                 <div className={styles.cartItemDate}>
-                  <img src="/calendar.png" alt="calendar" className={styles.icon} />
+                  <img
+                    src="/calendar.png"
+                    alt="calendar"
+                    className={styles.icon}
+                  />
                   {item.date}
                 </div>
                 <div className={styles.cartItemTimeRow}>
@@ -130,13 +143,16 @@ export default function MyCart() {
                   {item.time}
                 </div>
                 <div className={styles.cartItemTags}>
-                  <div>
-                  <span className={styles.cartTag}>{item.people} {item.people > 1 ? "People" : "Person"}</span>
-                  <span className={styles.cartTag}>{item.equipment} Equipment</span>
+                  <div className={styles.cartTags}>
+                    <span className={styles.cartTag}>
+                      {item.people} {item.people > 1 ? "People" : "Person"}
+                    </span>
+                    <span className={styles.cartTag}>
+                      {item.equipment} Equipment
+                    </span>
                   </div>
                   <span className={styles.cartItemTitle}>{item.price} AED</span>
                 </div>
-                
               </div>
             </div>
           ))}
@@ -145,12 +161,16 @@ export default function MyCart() {
           <div className={styles.summaryBox}>
             <div className={styles.summaryTitle}>Payment Summary</div>
             <div className={styles.summaryActivities}>
-              {items.filter(i => selected.includes(i.id)).map((item, idx) => (
-                <div key={item.id} className={styles.summaryActivityRow}>
-                  <span>{idx + 1}. {item.title}</span>
-                  <span>{item.price} AED</span>
-                </div>
-              ))}
+              {items
+                .filter((i) => selected.includes(i.id))
+                .map((item, idx) => (
+                  <div key={item.id} className={styles.summaryActivityRow}>
+                    <span>
+                      {idx + 1}. {item.title}
+                    </span>
+                    <span>{item.price} AED</span>
+                  </div>
+                ))}
             </div>
             <button className={styles.rewardBtn} onClick={handleRewardPoints}>
               Use Reward Points <span>{rewardPoints}</span>
@@ -172,7 +192,9 @@ export default function MyCart() {
             </div>
             <div className={styles.summaryRow}>
               <span className={styles.grandTotalLabel}>Grand Total</span>
-              <span className={styles.grandTotalValue}>{total > 0 ? total : 0} AED</span>
+              <span className={styles.grandTotalValue}>
+                {total > 0 ? total : 0} AED
+              </span>
             </div>
             <div className={styles.paymentMethodBox}>
               <span>Will Smith (2214***21)</span>
@@ -180,11 +202,13 @@ export default function MyCart() {
             </div>
             <button className={styles.checkoutBtn}>Checkout</button>
             <p className={styles.termsText}>
-              Enjoy your day and book again for more offers and discounts! <a href="#">Learn more about FlyFish Terms & conditions.</a>
+              Enjoy your day and book again for more offers and discounts!{" "}
+              <a href="#">Learn more about FlyFish Terms & conditions.</a>
             </p>
           </div>
         </div>
       </div>
+      <p className={styles.checkoutLink}>Checkout</p>
     </div>
   );
-} 
+}

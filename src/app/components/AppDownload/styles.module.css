@@ -26,7 +26,7 @@
   margin-bottom: 1rem;
   line-height: 1.1;
   color: white;
-  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-family: "Noto Sans Devanagari", sans-serif;
 }
 
 .appDownloadDesc {
@@ -35,7 +35,7 @@
   line-height: 1.3;
   margin-bottom: 1.5rem;
   max-width: 100%; /* Full width for readability */
-  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-family: "Noto Sans Devanagari", sans-serif;
 }
 
 .appDownloadButtons {
@@ -61,23 +61,35 @@
   width: 100%;
 }
 
-.mockupImg1 {   
+.mockupImg1 {
   height: 180px; /* Smaller default size */
   position: absolute;
-  bottom: 0;  
+  bottom: 0;
   right: 80px; /* Adjusted for smaller screens */
   z-index: 2;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.15));
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.15));
 }
 
-.mockupImg2 { 
+.mockupImg2 {
   height: 240px; /* Smaller default size */
   position: absolute;
   right: 0;
   bottom: -5px;
-  z-index: 1; 
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.10));
+  z-index: 1;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
   transform: translateX(-20px) scale(0.95);
+}
+
+@media (max-width: 600px) {
+  .mockupImg1 {
+    height: 320px !important;
+    right: 320px;
+  }
+
+  .mockupImg2 {
+    height: 320px !important;
+    transform: translateX(-30px) scale(0.95);
+  }
 }
 
 /* Tablet (min-width: 600px) */
@@ -88,24 +100,26 @@
     padding: 0 40px; /* Increased padding */
     gap: 1.5rem;
   }
-  
+  .appDownloadButtons {
+    justify-content: start;
+  }
   .appDownloadText {
     flex: 1;
     text-align: left; /* Left-align text for larger screens */
     padding-top: 40px;
   }
-  
+
   .appDownloadMockups {
     flex: 1;
     min-height: 280px;
     justify-content: flex-end;
   }
-  
+
   .mockupImg1 {
     height: 220px;
     right: 120px;
   }
-  
+
   .mockupImg2 {
     height: 300px;
     transform: translateX(-30px) scale(0.95);
@@ -118,28 +132,28 @@
     padding: 0 80px; /* Larger padding for desktop */
     gap: 2rem;
   }
-  
+
   .appDownloadText {
     padding-top: 50px;
   }
-  
+
   .appDownloadTitle {
     font-size: 2.1rem;
   }
-  
+
   .appDownloadDesc {
     max-width: 500px;
   }
-  
+
   .appDownloadMockups {
     min-height: 320px;
   }
-  
+
   .mockupImg1 {
     height: 270px;
     right: 180px;
   }
-  
+
   .mockupImg2 {
     height: 430px;
     transform: translateX(-40px) scale(0.95);
@@ -151,34 +165,49 @@
   .appDownloadSection {
     padding: 1.5rem 0;
   }
-  
+
   .appDownloadText {
     padding-top: 15px;
   }
-  
+
   .appDownloadTitle {
     font-size: clamp(1.5rem, 4vw, 1.8rem);
   }
-  
+
   .appDownloadDesc {
     font-size: 0.9rem;
   }
-  
+
   .storeBtn img {
     height: 36px;
   }
-  
+
   .appDownloadMockups {
     min-height: 160px;
   }
-  
+
   .mockupImg1 {
     height: 140px;
     right: 60px;
   }
-  
+
   .mockupImg2 {
     height: 180px;
     transform: translateX(-15px) scale(0.95);
+  }
+}
+
+@media (max-width: 768px) {
+  .mockupImg1 {
+    height: 220px;
+    right: 120px;
+  }
+
+  .mockupImg2 {
+    height: 300px;
+    transform: translateX(-30px) scale(0.95);
+  }
+  .appDownloadContent {
+    gap: 10rem;
   }
 }

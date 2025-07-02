@@ -1,18 +1,22 @@
 "use client";
 
-import React, { useState } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from './styles.module.css';
+import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import styles from "./styles.module.css";
+import { FaFacebook } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { IoLogoInstagram } from "react-icons/io5";
+
 
 const FlyFishFooter = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Subscribed:', { name, email });
-    setName('');
-    setEmail('');
+    console.log("Subscribed:", { name, email });
+    setName("");
+    setEmail("");
   };
 
   return (
@@ -29,7 +33,7 @@ const FlyFishFooter = () => {
             onChange={(e) => setName(e.target.value)}
             required
           />
-          <input    
+          <input
             type="email"
             className={styles.input}
             placeholder="Your Email"
@@ -37,45 +41,98 @@ const FlyFishFooter = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <button type="submit" className={styles.subscribeBtn}>Subscribe</button>
+          <button type="submit" className={styles.subscribeBtn}>
+            Subscribe
+          </button>
         </form>
       </section>
       <div className={styles.footerColumns}>
-        <div className={styles.footerCol}>
+        <div className={styles.footerCol + " " + styles.footerlogoCol}>
           <img src="/logo.png" alt="FlyFish Logo" width="110" height="35" />
           <p className={styles.aboutDesc}>
-            At FlyWish, we bring the thrill of watersports to life! We offer unforgettable beachside adventures for thrill-seekers and ocean lovers. Dive into excitement, ride the waves, and make lasting memories with us!
+            At FlyWish, we bring the thrill of watersports to life! We offer
+            unforgettable beachside adventures for thrill-seekers and ocean
+            lovers. Dive into excitement, ride the waves, and make lasting
+            memories with us!
           </p>
           <div className={styles.socials}>
-            <a href="#" className={styles.socialIcon}><img src="/fb.png" alt="Facebook" /></a>
-            <a href="#" className={styles.socialIcon}><img src="/insta.png" alt="Instagram" /></a>
-            <a href="#" className={styles.socialIcon}><img src="/tiktok.png" alt="Tiktok" /></a>
+            <a href="#" className={styles.socialIconAnchor}>
+              <FaFacebook className={styles.socialIcon}/>
+            </a>
+            <a href="#" className={styles.socialIconAnchor}>
+              <IoLogoInstagram className={styles.socialIcon}/>
+            </a>
+            <a href="#" className={styles.socialIconAnchor}>
+              <BsTwitterX className={styles.socialIcon}/>
+            </a>
           </div>
         </div>
         <div className={styles.footerCol}>
           <h5 className={styles.footerTitle}>Links</h5>
           <ul className={styles.footerLinks}>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Our Offers</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policies</a></li>
+            <li>
+              <a href="#">Blogs</a>
+            </li>
+            <li>
+              <a href="#">Privacy Policies</a>
+            </li>
+            <li>
+              <a href="#">Terms & Conditions</a>
+            </li>
+            <li>
+              <a href="#">About Us</a>
+            </li>
           </ul>
         </div>
         <div className={styles.footerCol}>
           <h5 className={styles.footerTitle}>Help</h5>
           <ul className={styles.footerLinks}>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li>
+              <a href="#">Pricing</a>
+            </li>
+            <li>
+              <a href="#">FAQs</a>
+            </li>
+            <li>
+              <a href="#">Contact Us</a>
+            </li>
           </ul>
         </div>
         <div className={styles.footerCol}>
           <h5 className={styles.footerTitle}>Contact Us</h5>
           <ul className={styles.footerContact}>
-            <li><img src="/phone-f.png" alt="Phone" className={styles.contactIcon}/> +971234561234</li>
-            <li><img src="/email-f.png" alt="Email" className={styles.contactIcon}/> hr.admin@flyfish.com</li>
-            <li><img src="/location-f.png" alt="Location" className={styles.contactIcon}/> No:02, Pullman Marjan Island, Dubai, UAE</li>
-            <li><img src="/web-f.png" alt="Website" className={styles.contactIcon}/> www.flyfish.ae</li>
+            <li>
+              <img
+                src="/phone-f.png"
+                alt="Phone"
+                className={styles.contactIcon}
+              />{" "}
+              +971234561234
+            </li>
+            <li>
+              <img
+                src="/email-f.png"
+                alt="Email"
+                className={styles.contactIcon}
+              />{" "}
+              info@flyfish.ae
+            </li>
+            <li>
+              <img
+                src="/location-f.png"
+                alt="Location"
+                className={styles.contactIcon}
+              />{" "}
+              No:02, Pullman Marjan Island, Dubai, UAE
+            </li>
+            <li>
+              <img
+                src="/web-f.png"
+                alt="Website"
+                className={styles.contactIcon}
+              />{" "}
+              www.flyfish.ae
+            </li>
           </ul>
         </div>
       </div>

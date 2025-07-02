@@ -78,7 +78,7 @@
   border: 1px solid #ff8800;
 }
 .itemCheckbox:checked:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   left: 6px;
@@ -115,7 +115,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
-  color: #2D2d2d;
+  color: #2d2d2d;
   margin: 0;
 }
 .cartItemTime {
@@ -123,7 +123,9 @@
   font-size: 0.95rem;
   font-weight: 400;
 }
-.cartItemLocation, .cartItemDate, .cartItemTimeRow {
+.cartItemLocation,
+.cartItemDate,
+.cartItemTimeRow {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -134,7 +136,7 @@
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
-  color: #2D2d2d;
+  color: #2d2d2d;
 }
 .icon {
   width: 12px;
@@ -255,15 +257,40 @@
   color: #888;
   margin-top: 10px;
 }
+.checkoutLink {
+  text-align: end;
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  display: none !important;
+}
 
+@media (max-width: 1150px) {
+  .cartPageContainer {
+    padding: 20px;
+  }
+}
 @media (max-width: 900px) {
   .cartMain {
     flex-direction: column;
     gap: 24px;
   }
   .cartSummarySection {
-    min-width: 0;
-    width: 100%;
+    display: none;
+  }
+  .cartListSection {
+    width: 100% !important;
+  }
+  .checkoutLink {
+    display: block !important;
+  }
+}
+@media (max-width: 1000px) {
+  .cartListSection {
+    padding: 20px;
+  }
+  .cartMain {
+    gap: 4px;
   }
 }
 @media (max-width: 600px) {
@@ -273,6 +300,9 @@
     padding: 16px 10px;
     font-size: 1.1rem;
   }
+  .cartPageContainer {
+    padding: 10px 5px;
+  }
   .cartMain {
     flex-direction: column;
     gap: 18px;
@@ -281,15 +311,15 @@
   .cartListSection {
     gap: 12px;
   }
+  .cartTags {
+    display: none;
+  }
   .cartItemCard {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 12px 8px;
-    gap: 10px;
+    gap: 5px;
   }
   .cartItemImage {
-    width: 100%;
-    height: 160px;
+    width: 100px;
+    height: 100%;
     border-radius: 10px;
   }
   .cartSummarySection {
@@ -299,4 +329,7 @@
   .summaryBox {
     padding: 18px 8px;
   }
-} 
+  .cartListSection {
+    padding: 0px;
+  }
+}
